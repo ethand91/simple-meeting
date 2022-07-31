@@ -58,7 +58,7 @@ export default function Room() {
 
   useEffect(() => {
     // init socket
-    socketRef.current = io(`https://${window.location.hostname}:3000`, { reconnection: false });
+    socketRef.current = io(`https://${window.location.hostname}`, { reconnection: false });
     handleSocket(params.roomKey);
 
     return () => {

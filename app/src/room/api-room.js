@@ -1,6 +1,6 @@
 const create = async () => {
   try {
-    const response = await fetch(`https://${window.location.hostname}:3000/api/rooms/`, {
+    const response = await fetch(`https://${window.location.hostname}/api/rooms/`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -16,7 +16,7 @@ const create = async () => {
 
 const login = async (roomId, signal) => {
   try {
-    const response = await fetch(`https://${window.location.hostname}:3000/api/rooms/${roomId}`, {
+    const response = await fetch(`https://${window.location.hostname}/api/rooms/${roomId}`, {
       method: 'GET',
       signal,
       headers: {
@@ -33,7 +33,7 @@ const login = async (roomId, signal) => {
 
 const remove = async (roomId) => {
   try {
-    const response = await fetch(`https://${window.location.hostname}:3000/api/rooms/${roomId}`, {
+    const response = await fetch(`https://${window.location.hostname}/api/rooms/${roomId}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
