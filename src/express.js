@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const https = require('https');
+const http = require('http');
 const bodyParser = require('body-parser');
 const compress = require('compression');
 const cors = require('cors');
@@ -20,6 +20,6 @@ app.use(cors());
 
 app.use('/', roomRoutes);
 
-const server = https.createServer(options, app);
+const server = http.createServer(app);
 
 module.exports = server;
